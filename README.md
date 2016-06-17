@@ -24,3 +24,11 @@ Server:
 
 
 ```
+
+## docker镜像
+
+从dockerhub中获取容器
+```
+镜像都是按照用户名/镜像名的方式来存储的
+docker pull learn/tutorial
+```
