@@ -1,0 +1,31 @@
+<configuration> 
+<property>
+  <name>mapreduce.framework.name</name>
+  <value>yarn</value>
+</property>
+<property>
+	<name>mapreduce.job.tracker</name>
+	<value>hdfs://master:9001</value>
+	<final>true</final>
+</property>
+<property>
+  <name>mapreduce.jobtracker.address</name>
+  <value>master:9001</value>
+  <final>true</final>
+</property>
+<property>
+	<name>mapreduce.jobhistory.webapp.address</name>
+	<value>master:19888</value>
+</property>
+ <property>
+  <name>mapreduce.jobtracker.system.dir</name>
+  <value>file://${HADOOP_HOME}/mapred/system</value>
+  <final>true</final>
+</property>
+ 
+<property>
+  <name>mapreduce.cluster.local.dir</name>
+  <value>file://${HADOOP_HOME}/mapred/local</value>
+  <final>true</final>
+</property>
+</configuration>

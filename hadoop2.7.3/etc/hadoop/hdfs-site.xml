@@ -1,0 +1,20 @@
+<configuration>
+   <property>
+      <name>dfs.namenode.name.dir</name>
+      <value>file://${HADOOP_HOME}/hdfs/name</value>
+      <final>true</final>
+   </property>
+   <property>
+      <name>dfs.datanode.data.dir</name>
+      <value>file://${HADOOP_HOME}/hdfs/data</value>
+      <final>true</final>
+   </property>
+   <property>
+      <name>dfs.replication</name>
+      <value>5</value>
+   </property>
+   <property>
+      <name>dfs.permissions.enabled</name>
+      <value>false</value>
+   </property>
+</configuration>
