@@ -32,3 +32,9 @@ Server:
 镜像都是按照用户名/镜像名的方式来存储的
 docker pull learn/tutorial
 ```
+
+## docker阿里云安装脚本
+```
+curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet | sh -
+sudo service docker start
+```
