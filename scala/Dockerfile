@@ -10,4 +10,3 @@ ENV SCALA_HOME /opt/scala
 ENV PATH $PATH:$SCALA_HOME/bin
 RUN cat /etc/profile
 RUN scala -version
-
