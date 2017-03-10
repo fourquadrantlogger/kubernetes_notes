@@ -15,3 +15,5 @@ opt/mysql
 ## build php-mysql
 
 ## build pdo-mysql
+
+## build libxml
