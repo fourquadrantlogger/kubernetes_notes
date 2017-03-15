@@ -17,3 +17,11 @@ opt/mysql
 ## build pdo-mysql
 
 ## build libxml
+
+## php.ini
+[mysql]
+extension=pdo_mysql.so
+extension=mysql.so
+
+extension_dir = "/usr/local/php5/ext"
+## php-fpm.conf
