@@ -49,3 +49,10 @@ sudo docker rm -f  `sudo docker ps -a -q`
 ```
 sudo docker rmi -f `sudo docker images | awk '/^<none>/ { print $3 }'`
 ```
+
+## Docker 参数
++ --link
+在使用Docker的时候我们会常常碰到这么一种应用，就是我需要两个或多个容器，其中某些容器需要使用另外一些容器提供的服务。比如这么一种情况：我们需要一个容器来提供MySQL的数据库服务，而另外两个容器作为客户端来连接使用mysql数据库服务。
+
++ --it
++ --name

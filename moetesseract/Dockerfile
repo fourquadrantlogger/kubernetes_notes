@@ -1,4 +1,5 @@
-FROM timeloveboy/moedocker
+FROM timeloveboy/tesseract
+MAINTAINER timeloveboy(734991033@qq.com)
 RUN wget http://golangtc.com/static/go/1.8/go1.8.linux-amd64.tar.gz  --progress=bar:force 2>&1
 RUN tar xzvf go1.8.linux-amd64.tar.gz
 RUN mv go  /opt/go
@@ -10,3 +11,13 @@ ENV GOROOT /opt/go
 ENV GOPATH /GOPATH
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/go/bin
 RUN apt-get install -y git
+
+
+RUN go get -u -v -t github.com/timeloveboy/moetesseract
+
+# build moetesseract binary and copy it to /usr/bin
+RUN cd $GOPATH/src/github.com/timeloveboy/moetesseract && go build -v -o moetesseract
+WORKDIR $GOPATH/src/github.com/timeloveboy/moetesseract
+EXPOSE 8092
+RUN ls -l
+CMD ./moetesseract
