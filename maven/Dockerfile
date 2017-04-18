@@ -1,4 +1,4 @@
-FROM timeloveboy/moedocker
+FROM timeloveboy/jdk8
 MAINTAINER timeloveboy(734991033@qq.com)
 # 非交互式
 RUN cd ~
