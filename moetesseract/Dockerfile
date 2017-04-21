@@ -18,6 +18,7 @@ RUN go get -u -v -t github.com/timeloveboy/moetesseract
 # build moetesseract binary and copy it to /usr/bin
 RUN cd $GOPATH/src/github.com/timeloveboy/moetesseract && go build -v -o moetesseract
 WORKDIR $GOPATH/src/github.com/timeloveboy/moetesseract
+VOLUME /tmp $GOPATH/src/github.com/timeloveboy/moetesseract/tmp
 EXPOSE 8092
 RUN ls -l
 CMD ./moetesseract

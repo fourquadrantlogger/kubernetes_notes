@@ -1,7 +1,7 @@
 # redis
 
 ```
-docker run --name some-redis -d redis
+docker run --name moeredis -d redis
 ```
 
 ## redis-cli
