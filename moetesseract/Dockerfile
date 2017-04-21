@@ -9,7 +9,7 @@ RUN echo "export GOPATH=/GOPATH" >>/etc/profile
 RUN echo "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/go" >>/etc/profile
 ENV GOROOT /opt/go
 ENV GOPATH /GOPATH
-ENV TMP /TMP
+ENV TMP $GOPATH/src/github.com/timeloveboy/moetesseract/tmp
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/go/bin
 RUN apt-get install -y git
 
