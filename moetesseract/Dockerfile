@@ -9,6 +9,7 @@ RUN echo "export GOPATH=/GOPATH" >>/etc/profile
 RUN echo "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/go" >>/etc/profile
 ENV GOROOT /opt/go
 ENV GOPATH /GOPATH
+ENV TMP /TMP
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/go/bin
 RUN apt-get install -y git
 
@@ -18,7 +19,7 @@ RUN go get -u -v -t github.com/timeloveboy/moetesseract
 # build moetesseract binary and copy it to /usr/bin
 RUN cd $GOPATH/src/github.com/timeloveboy/moetesseract && go build -v -o moetesseract
 WORKDIR $GOPATH/src/github.com/timeloveboy/moetesseract
-VOLUME /tmp $GOPATH/src/github.com/timeloveboy/moetesseract/tmp
+VOLUME $TMP $GOPATH/src/github.com/timeloveboy/moetesseract/tmp
 EXPOSE 8092
 RUN ls -l
 CMD ./moetesseract
