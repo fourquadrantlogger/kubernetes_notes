@@ -1,5 +1,8 @@
 # redis
 
+阿里镜像
+registry.cn-qingdao.aliyuncs.com/moeserverdemo/redis
+
 ```
 docker run --name moeredis -d redis
 ```
