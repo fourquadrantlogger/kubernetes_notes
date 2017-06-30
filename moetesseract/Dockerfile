@@ -11,7 +11,8 @@ ENV GOROOT /opt/go
 ENV GOPATH /GOPATH
 ENV TMP $GOPATH/src/github.com/timeloveboy/moetesseract/tmp
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/go/bin
-RUN apt-get install -y git
+RUN apt-get update
+RUN apt-get install -y --fix-missing  git-core
 
 
 RUN go get -u -v -t github.com/timeloveboy/moetesseract
