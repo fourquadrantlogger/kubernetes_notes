@@ -1,5 +1,6 @@
 FROM timeloveboy/moedocker
 MAINTAINER timeloveboy(734991033@qq.com)
+
 ADD installgo.sh installgo.sh
 RUN sh installgo.sh
 ENV GOROOT /opt/go

@@ -10,5 +10,6 @@ pwd
 ls
 ./configure
 make install
+make distclean
 ln -s /opt/Python-${pyversion}/python /usr/bin/python
 python -V

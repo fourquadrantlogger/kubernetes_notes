@@ -10,3 +10,4 @@
 + curl
 + openssh-server
 + iputils-ping
++ linux-source
