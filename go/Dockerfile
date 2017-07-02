@@ -1,12 +1,7 @@
 FROM timeloveboy/moedocker
-RUN wget http://golangtc.com/static/go/1.8/go1.8.linux-amd64.tar.gz  --progress=bar:force 2>&1
-RUN tar xzvf go1.8.linux-amd64.tar.gz
-RUN mv go  /opt/go
-RUN mkdir -p /GOPATH
-RUN echo "export GOROOT=/opt/go" >>/etc/profile
-RUN echo "export GOPATH=/GOPATH" >>/etc/profile
-RUN echo "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/go" >>/etc/profile
+MAINTAINER timeloveboy(734991033@qq.com)
+ADD installgo.sh installgo.sh
+RUN sh installgo.sh
 ENV GOROOT /opt/go
 ENV GOPATH /GOPATH
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/go/bin
-RUN apt-get install -y git
