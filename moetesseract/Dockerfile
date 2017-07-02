@@ -6,6 +6,7 @@ RUN sh installgo.sh
 ENV GOROOT /opt/go
 ENV GOPATH /GOPATH
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/go/bin
+
 WORKDIR $GOPATH/src/github.com/timeloveboy/moetesseract
 ENV TMP $GOPATH/src/github.com/timeloveboy/moetesseract/tmp
 RUN git clone http://github.com/timeloveboy/moetesseract $GOPATH/src/github.com/timeloveboy/moetesseract &&\
