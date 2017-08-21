@@ -1,0 +1,1 @@
+https://quericy.me/blog/699/
