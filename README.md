@@ -62,3 +62,5 @@ sudo docker rmi -f `sudo docker images | awk '/^<none>/ { print $3 }'`
 
 
 docker logs -f my-container-name
+
+## docker inspect 

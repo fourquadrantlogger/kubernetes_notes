@@ -1,5 +1,5 @@
 #!/bin/sh
-v="1.8.3"
+v="1.9"
 cd ~
 wget "https://storage.googleapis.com/golang/go${v}.linux-amd64.tar.gz"  --progress=bar:force 2>&1 &&\
 tar xzvf "go${v}.linux-amd64.tar.gz"  &&\
