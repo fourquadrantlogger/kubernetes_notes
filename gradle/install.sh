@@ -1,5 +1,5 @@
 #!/bin/sh
-v="4.1"
+v="4.0.1"
 cd ~
 mkdir -p /opt/gradle
 wget "https://services.gradle.org/distributions/gradle-${v}-bin.zip"  --progress=bar:force 2>&1 &&\
