@@ -4,7 +4,7 @@
 
 ## 命令
 ```
-sudo docker run --name moe-mysql -v /media/paidian/DATA/mysqldata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql
+sudo docker run --name moe-mysql -v /data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql
 ```
 
 ## 连接本地容器 mysql
