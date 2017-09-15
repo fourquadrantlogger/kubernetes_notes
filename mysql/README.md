@@ -4,7 +4,8 @@
 
 ## 命令
 ```
-sudo docker run --name moe-mysql -v /data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql
+sudo docker rm -f moe-mysql
+sudo docker run --restart=always --name moe-mysql -v /data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql
 ```
 
 ## 连接本地容器 mysql
@@ -17,4 +18,14 @@ sudo docker run -it --link moe-mysql:mysql --rm mysql sh -c 'exec mysql -h"$MYSQ
 ```
 sudo docker run -it  --rm mysql sh -c 'exec mysql -h  -P  -uroot -p '
 
+```
+
+## mysql系统命令
+
++ 查看当前系统版本(lsb_release -a)
+
++ 重启mysql
+```
+/etc/init.d/mysql stop   
+/etc/init.d/mysql start
 ```
