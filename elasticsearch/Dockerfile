@@ -8,4 +8,4 @@ ENV PATH $PATH:$ES_HOME/bin
 # 容器需要开放ES的9200和9300端口
 EXPOSE 9200
 EXPOSE 9300
-CMD bin/elasticsearch
+CMD elasticsearch

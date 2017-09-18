@@ -3,6 +3,9 @@
 阿里镜像
 registry.cn-qingdao.aliyuncs.com/moeserverdemo/redis
 
+
+https://hub.docker.com/r/library/redis/
+
 ```
 docker run --name moeredis -d redis
 ```

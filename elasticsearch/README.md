@@ -3,6 +3,6 @@
 # start
 
 ```
-sudo docker  run --user elasticsearch --net=host --name ES timeloveboy/elasticsearch
+sudo docker  run -rm --user elasticsearch   --name ES -it timeloveboy/elasticsearch /bin/bash
 ```
 
