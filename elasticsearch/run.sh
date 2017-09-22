@@ -16,6 +16,7 @@ docker run --user elasticsearch  \
 -v /data/elasticsearch/plugins:/opt/elasticsearch/plugins \
 -p 9200:9200 \
 -p 9300:9300 \
+--net=host \
 -d timeloveboy/elasticsearch
 
 docker ps -a
