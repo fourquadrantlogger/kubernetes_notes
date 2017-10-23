@@ -52,8 +52,6 @@ sudo docker rmi -f `sudo docker images | awk '/^<none>/ { print $3 }'`
 
 ```
 sudo docker images|grep none | awk ' { print $3 }'
-
-
 ```
 ## Docker 参数
 + --link
