@@ -2,7 +2,7 @@
 
 ## 官方安装指引
 
-https://docs.docker.com/install/linux/docker-ce/ubuntu/#uninstall-old-versions
+https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
 ## ubuntu 
 ```
