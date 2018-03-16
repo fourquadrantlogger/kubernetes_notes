@@ -1,5 +1,9 @@
 # docker_notes
 
+## 官方安装指引
+
+https://docs.docker.com/install/linux/docker-ce/ubuntu/#uninstall-old-versions
+
 ## ubuntu 
 ```
 timeloveboy@timeloveboy-os:~$ curl -sSL https://get.docker.com/ | sudo sh
