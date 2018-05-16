@@ -22,3 +22,10 @@
 + overlay 跨主机模式
 
 新增模式
+
+
+## docker 网卡
++ 关闭网卡
+``` 
+sudo ip link set dev docker0 down
+```
