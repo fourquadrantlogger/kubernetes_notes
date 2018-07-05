@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "httpreturn.fullname" . }}
+  labels:
+    app: {{ template "httpreturn.name" . }}
+    chart: {{ template "httpreturn.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.image.port }}
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "httpreturn.name" . }}
+    release: {{ .Release.Name }}

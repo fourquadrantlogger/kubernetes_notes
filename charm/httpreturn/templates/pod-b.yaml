@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: {{ template "httpreturn.fullname" . }}-b
+  labels:
+        app: {{ template "httpreturn.name" . }}
+        release: {{ .Release.Name }}
+spec:
+  containers:
+  - name: httpreturn-b
+    image: {{ .Values.image.repository }}
+    command: [ 'httpreturn' , 'i am httpreturn-b' ]
